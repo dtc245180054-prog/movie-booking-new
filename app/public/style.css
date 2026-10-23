@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f3f4f8; color: #222; }
+header { background: #1f2a44; color: #fff; padding: 20px; text-align: center; }
+header h1 { margin: 0 0 4px; }
+header p { margin: 0; opacity: .8; }
+main { max-width: 900px; margin: 20px auto; padding: 0 16px; }
+section { background: #fff; border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+h2 { margin-top: 0; font-size: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.card { border: 1px solid #dde; border-radius: 8px; padding: 12px; }
+.card h3 { margin: 0 0 6px; }
+.card p { margin: 4px 0; font-size: 14px; }
+.muted { color: #666; }
+button { background: #e63946; color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; cursor: pointer; font-size: 14px; }
+button:hover { background: #c92d3a; }
+.screen { background: #cfd4e3; text-align: center; padding: 6px; border-radius: 4px; margin: 10px auto; width: 70%; font-size: 12px; letter-spacing: 3px; }
+#seats { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; max-width: 480px; margin: 0 auto; }
+.seat { padding: 8px 0; text-align: center; border-radius: 6px; font-size: 13px; border: 1px solid #aab; }
+.seat.free { background: #fff; color: #222; }
+.seat.free:hover { background: #ffe3e6; }
+.seat.selected { background: #2a9d8f; color: #fff; border-color: #2a9d8f; }
+.seat.booked { background: #888; color: #fff; border-color: #888; cursor: not-allowed; }
+.legend { display: flex; gap: 10px; justify-content: center; margin: 12px 0; }
+.legend .seat { padding: 4px 10px; }
+form label { display: block; margin-bottom: 10px; font-size: 14px; }
+form input { display: block; width: 100%; max-width: 360px; padding: 8px; margin-top: 4px; border: 1px solid #bbb; border-radius: 6px; }
+.error { color: #c1121f; font-weight: bold; }
+.ticket { border: 2px dashed #2a9d8f; border-radius: 10px; padding: 16px; }
+.ticket h2 { color: #2a9d8f; }

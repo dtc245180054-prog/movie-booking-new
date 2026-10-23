@@ -1,0 +1,8 @@
+.env
+nginx/certs/*.key
+nginx/certs/*.crt
+nginx/certs/*.pem
+node_modules/
+npm-debug.log
+*.log
+.DS_Store

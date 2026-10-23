@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CineBook - Đặt vé xem phim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 CineBook</h1>
+    <p>Hệ thống đặt vé xem phim trực tuyến</p>
+  </header>
+  <main>
+    <section id="step1">
+      <h2>1. Chọn suất chiếu</h2>
+      <div id="showtimes" class="grid"></div>
+    </section>
+
+    <section id="step2" hidden>
+      <h2>2. Chọn ghế</h2>
+      <p id="movie-info" class="muted"></p>
+      <div class="screen">MÀN HÌNH</div>
+      <div id="seats"></div>
+      <div class="legend">
+        <span class="seat free">Trống</span>
+        <span class="seat selected">Đang chọn</span>
+        <span class="seat booked">Đã đặt</span>
+      </div>
+      <p id="selected-info"></p>
+    </section>
+
+    <section id="step3" hidden>
+      <h2>3. Thanh toán (giả lập)</h2>
+      <form id="pay-form" autocomplete="off">
+        <label>Họ tên
+          <input id="name" required maxlength="100" placeholder="Nguyễn Văn A">
+        </label>
+        <label>Số thẻ (giả lập, 16 số)
+          <input id="card" required inputmode="numeric" pattern="[0-9 ]{16,19}" maxlength="19" placeholder="4111 1111 1111 1111">
+        </label>
+        <p class="muted">Thẻ có 4 số cuối là 0000 sẽ bị từ chối để demo thanh toán thất bại.</p>
+        <p>Tổng tiền: <strong id="total">0 đ</strong></p>
+        <button type="submit">Thanh toán</button>
+        <p id="error" class="error"></p>
+      </form>
+    </section>
+
+    <section id="result" hidden></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
